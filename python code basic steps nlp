@@ -23,3 +23,19 @@ df1.columns[df1.isnull().any()].tolist()
 
 #The columns with sum of NA Values
 df1.isna().sum()
+
+Convert the column to Categorical
+#df5['name'] = pd.Categorical(df4['name'])
+
+#Find the classes within a column and number of labels within a column
+df5['Problem Type'].unique()
+
+#Find the columns in the dataframe having NA values and the sum of the na values
+null_columns=df1.columns[df1.isnull().any()]
+df1[null_columns].isnull().sum()
+
+#print the rows that has na values of the column
+print(df1[df1["column"].isnull()]
+
+#Create a new datframe by not considering na values of a single column
+df2 = df1[pd.notnull(df1['column'])]
