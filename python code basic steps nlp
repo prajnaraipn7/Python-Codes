@@ -21,5 +21,12 @@ print("rows   :",train) #printing number of rows in data
 #Find the columns in the dataframe having NA values
 df1.columns[df1.isnull().any()].tolist()
 
-#The columns with sum of NA Values
-df1.isna().sum()
+#Find the columns in the dataframe having NA values and the sum of the na values
+null_columns=df1.columns[df1.isnull().any()]
+df1[null_columns].isnull().sum()
+
+#print the rows that has na values of a single column
+print(df1[df1["Column"].isnull()].head())
+
+#Create a new datframe by not considering na values of a single column, here it is problem type
+df2 = df1[pd.notnull(df1['Column'])]
