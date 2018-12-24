@@ -1,0 +1,19 @@
+#loading from the current directory
+import os
+print(os.listdir("../DIR/"))
+
+#Reading a Excel File
+pd.read_excel('name.xlsx', 'Sheet2', index_col=None)
+
+#Reading a csv file
+pd.read_csv('../DIR/name.csv', delimiter=",")
+
+#Converting a excel file to csv
+data_xls.to_csv('name.csv', encoding='utf-8', index=False)
+
+#understanding structure of datset
+df1.shape[0]
+
+#Printing the sum of rows in the dataset
+print("       : total no of rows") #printing
+print("rows   :",train) #printing number of rows in data
