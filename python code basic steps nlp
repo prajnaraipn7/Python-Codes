@@ -17,3 +17,9 @@ df1.shape[0]
 #Printing the sum of rows in the dataset
 print("       : total no of rows") #printing
 print("rows   :",train) #printing number of rows in data
+
+#Find the columns in the dataframe having NA values
+df1.columns[df1.isnull().any()].tolist()
+
+#The columns with sum of NA Values
+df1.isna().sum()
